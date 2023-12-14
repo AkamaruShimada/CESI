@@ -1,0 +1,14 @@
+D:\CESI\Cours\POO - C#\Cours.NET\bin\Debug\net7.0\Cours.NET.exe
+D:\CESI\Cours\POO - C#\Cours.NET\bin\Debug\net7.0\Cours.NET.deps.json
+D:\CESI\Cours\POO - C#\Cours.NET\bin\Debug\net7.0\Cours.NET.runtimeconfig.json
+D:\CESI\Cours\POO - C#\Cours.NET\bin\Debug\net7.0\Cours.NET.dll
+D:\CESI\Cours\POO - C#\Cours.NET\bin\Debug\net7.0\Cours.NET.pdb
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\Cours.NET.GeneratedMSBuildEditorConfig.editorconfig
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\Cours.NET.AssemblyInfoInputs.cache
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\Cours.NET.AssemblyInfo.cs
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\Cours.NET.csproj.CoreCompileInputs.cache
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\Cours.NET.dll
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\refint\Cours.NET.dll
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\Cours.NET.pdb
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\Cours.NET.genruntimeconfig.cache
+D:\CESI\Cours\POO - C#\Cours.NET\obj\Debug\net7.0\ref\Cours.NET.dll
