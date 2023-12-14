@@ -1,0 +1,58 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+#title {
+    font-size: 4em;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+.bande {
+    background: linear-gradient(to right, #69e100, #725200);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+h3 {
+    font-style: italic;
+    font-size: 2em;
+}
+
+article p {
+    padding: 1em;
+    color: brown;
+}
+
+#animal p {
+    font-weight: bold;
+}
+
+#loup {
+    width: 30%;
+    height: auto;
+}
+
+article#house p {
+    color: blue;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function Auto(){
+            Name.value = 'Mankichian'
+            Mail.value = 'mankichian.dylan@gmail.com'
+            Message.value = 'Salut'
+        }
+
+        function CImage(){
+            imagejs.src = "/Wolf.jpg"
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+<script>
+    let space = document.createElement("br")
+    let space2 = document.createElement("br")
+    let space3 = document.createElement("br")
+    let space4 = document.createElement("br")
+
+    
+    let imagejs = document.createElement("img")
+    imagejs.src = "/Wolfs.jpg"
+    imagejs.height = "700"
+    document.body.appendChild(imagejs)
+    
+    let form = document.createElement("form")
+    
+    
+    form.appendChild(space4)
+
+    let LabelName = document.createElement("label")
+    LabelName.textContent = "Nom"
+    form.appendChild(LabelName)
+    let Name = document.createElement("input")
+    Name.type = "text"
+    Name.id = "name"
+    form.appendChild(Name)
+
+    form.appendChild(space)
+
+    let LabelMail = document.createElement("label")
+    LabelMail.textContent = "Email"
+    form.appendChild(LabelMail)
+    let Mail = document.createElement("input")
+    Mail.type = "email"
+    Mail.id = "mail"
+    form.appendChild(Mail)
+
+    form.appendChild(space2)
+
+    let LabelMessage = document.createElement("label")
+    LabelMessage.textContent = "Message"
+    form.appendChild(LabelMessage)
+    let Message = document.createElement("input")
+    Message.type = "text"
+    Message.id = "message"
+    form.appendChild(Message)
+
+    form.appendChild(space3)
+
+    let buttonE = document.createElement("button")
+    buttonE.type = "button"
+    buttonE.textContent = "Envoyer"
+    buttonE.onclick = CImage
+    form.appendChild(buttonE)
+
+
+    let buttonAuto = document.createElement("button")
+    buttonAuto.type = "button"
+    buttonAuto.textContent = "Remplir Auto"
+    buttonAuto.onclick = Auto
+    form.appendChild(buttonAuto)
+
+    document.body.append(form)
+
+</script>
+
+</html>

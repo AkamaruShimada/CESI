@@ -1,0 +1,63 @@
+﻿<Window x:Class="BOWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BOWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Vertical">
+            <Image Source="Kaneki 3.jpg" Height="98" Width="148"></Image>
+            <Menu Width="150" Height="606">
+                <MenuItem x:Name="Btn_Articles" Header="Articles" Height="56" Width="150" IsEnabled="True" Click="Btn_Menu_Click"></MenuItem>
+                <MenuItem x:Name="Btn_Familles" Header="Familles" Height="56" Width="150" IsEnabled="True" Click="Btn_Menu_Click"></MenuItem>
+                <MenuItem x:Name="Btn_Commandes" Header="Commandes" Height="56" Width="150" IsEnabled="True" Click="Btn_Menu_Click"></MenuItem>
+                <MenuItem x:Name="Btn_Fournisseurs" Header="Fournisseurs" Height="56" Width="150" IsEnabled="True" Click="Btn_Menu_Click"></MenuItem>
+                <MenuItem x:Name="Btn_Inventaire" Header="Inventaire" Height="56" Width="150" IsEnabled="True" Click="Btn_Menu_Click"></MenuItem>
+                <MenuItem x:Name="Btn_Admin" Header="Admin" Height="56" Width="150" IsEnabled="True" Click="Btn_Menu_Click"></MenuItem>
+            </Menu>
+        </StackPanel>
+        <Separator/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+
+                <StackPanel Height="93" Width="1130">
+
+                </StackPanel>
+                <Separator/>
+                <StackPanel Orientation="Horizontal">
+                    <Grid>
+
+                        <Grid.Resources>
+                            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+                            <Style TargetType="StackPanel" x:Key="StackPanelWidthStyle">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=myMenu, Converter={StaticResource BooleanToVisibilityConverter}}" Value="True">
+                                        <Setter Property="Width" Value="980"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=myMenu, Converter={StaticResource BooleanToVisibilityConverter}}" Value="False">
+                                        <Setter Property="Width" Value="1130"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Menu x:Name="M_SousMenu" Width="150" Height="606" VerticalAlignment="Center" Grid.Column="0">
+
+                        </Menu>
+
+                        <StackPanel x:Name="myStackPanel" Width="980" Height="607" VerticalAlignment="Center" Background="LightGray" Grid.Column="1" Style="{StaticResource StackPanelWidthStyle}">
+
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>

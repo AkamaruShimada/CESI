@@ -1,0 +1,43 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set environment variable for HTTP Authorization header
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Set base URL path for rewriting rules
+RewriteBase /
+
+# Do not rewrite requests for index.php file
+RewriteRule ^index\.php$ - [L]
+
+# Rewrite requests to index.php if file or directory does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# Set environment variable for requests to /admin URL
+SetEnvIf Request_URI ^/admin auth=1
+
+# Set authentication realm and type, and path to password file
+AuthName "Merci de vous connecter"
+AuthType Basic
+AuthUserFile "www/.htpasswd"
+
+# Set access control rules
+<RequireAll>
+  # Allow access to all requests except those in /admin
+  <RequireAny>
+    Require expr %{REQUEST_URI} !~ m#^/admin#
+    <RequireAll>
+      Require valid-user
+      Require env auth
+    </RequireAll>
+  </RequireAny>
+</RequireAll>
+
+# Set custom error pages
+ErrorDocument 400 /errors/400.html
+ErrorDocument 401 /errors/401.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+ErrorDocument 500 /errors/500.html

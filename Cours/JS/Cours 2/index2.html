@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <p>
+        <label hidden>Image</label>
+        <img src="">
+    </p>
+
+    <p id="prenom">
+        <label>Prénom</label>
+    </p>
+
+    <p id="nom">
+        <label>Nom</label>
+    </p>
+
+    <p id="mail">
+        <label>Email</label>
+    </p>
+
+    <p id="tel">
+        <label>Tel</label>
+    </p>
+
+
+    <script>
+        xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.thecatapi.com/v1/images/search')
+        xhr.onload = () => {
+            console.log(xhr.response)
+
+            let response = JSON.parse(xhr.responseText)
+            url = response[0].url
+            console.log(response)
+            let image = document.querySelector('img')
+            image.src = url
+        };
+        xhr.send()
+    </script>
+</body>
+
+</html>

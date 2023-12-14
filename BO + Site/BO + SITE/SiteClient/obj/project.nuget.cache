@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "A82yBcJIl6NUXXf23vFqncAT1UIWTnATHBKKBFmexOh3X4YMXztv6haFHwRR7Qjtd7k8srmmJUbRifX43y7vcQ==",
+  "success": false,
+  "projectFilePath": "D:\\CESI\\BO + Site\\BO + SITE\\SiteClient\\SiteClient.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet BOWPF n'est pas compatible avec net7.0 (.NETCoreApp,Version=v7.0). Le projet BOWPF prend en charge : net7.0-windows7.0 (.NETCoreApp,Version=v7.0)",
+      "libraryId": "BOWPF",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}
